@@ -1,0 +1,22 @@
+.skills {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 60%;
+    margin: 0 auto;
+}
+.logo-box {
+
+    text-align: center;
+    margin: 50px
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+.logo-title {
+   margin-top: 8px;
+   opacity: 60%; 
+}

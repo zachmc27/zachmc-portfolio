@@ -1,18 +1,23 @@
 import Card from "@/components/Card"
-import projects from "@/assets/projects"
-import "../styles/Portfolio.css"
+import projects from "@/data/projects"
 import Grid from "@/components/Grid"
 
 export default function Portfolio() {
 
     return(
-        <div className="portfolio-section">
-        <h1 className="portfolio-title">Portfolio</h1>
-        <div className="info-text">
-            <p>Welcome to my portfolio section! Click the tabs to sort between my full stack, front end, and backend works.</p>
-            <p>Click on an image to display a brief description about the project. Repository links and deployed links are provided where applicable. </p>
+        <>
+        <div className="background-img"></div>
+        <div className="section">
+        <h1 className="section-title">The Accolades of my Journey</h1>
+        <div className="info-text-box">
+            <p>Welcome to my portfolio! The projects found here are the stepping stones I've taken to improve as a developer each day.</p>
+            <br />
+            <br />
+            <br />
+            <p className="faded"> Select a project to dive into further detail. </p>
         </div>
         <Grid></Grid>
         </div>
+        </>
     )
 }

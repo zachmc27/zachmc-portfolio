@@ -1,3 +1,62 @@
+:root {
+    background-color: rgb(44, 44, 44);
+}
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+}
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid white;
+    position: relative;
+    height: fit-content;
+}
+
+.section-title {
+    position:relative;
+    font-size: 30px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.background-img {
+    height: 250px;
+    border: 1px solid white;
+}
+
+.faded {
+    font-style: italic;
+    opacity: 60%;
+}
+
+.info-text-box {
+    text-align: center;
+    width: 20%;
+    margin-bottom: 30px;
+}
+
+.i {
+    font-style: italic;
+}
+
+.b {
+    font-weight: bold;
+}

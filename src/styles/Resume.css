@@ -1,0 +1,17 @@
+.others-box {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.others-box ul {
+    list-style-type:circle;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.others-box li {
+    margin-bottom: 5px; 
+}
