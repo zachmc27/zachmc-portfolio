@@ -1,0 +1,28 @@
+.menu-bars {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.menu-btn {
+    position: relative;
+    left: 40%
+}
+
+.css-xvlchq:is([aria-expanded=true], [data-expanded], [data-state=expanded]) {
+    background: rgba(0, 0, 0, 0);
+    --bg-currentcolor: var(--chakra-colors-color-palette-subtle);
+}
+
+.chakra-button {
+    width: 30px;
+    height: 30px;
+}
+
+.css-xvlchq {
+    border-width: 0px;
+}
+
+.menu-btn:focus-visible {
+    outline: none;
+}

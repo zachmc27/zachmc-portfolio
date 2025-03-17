@@ -1,11 +1,12 @@
 .footer-box {
-    border: 1px solid white;
+    border-top: 1px solid var(--accent);
     position: relative;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100vw;
 } 
 
 .footer-content {
@@ -22,6 +23,13 @@
     width: 30px;
     height: 30px;
     color: gray;
+    filter: invert(1);
+    opacity: 20%;
+}
+
+.footer-bubble:hover {
+    opacity: 50%;
+    transition: opacity .3s ease-in
 }
 
 .github {

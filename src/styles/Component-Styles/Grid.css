@@ -1,7 +1,8 @@
 .card-container {
     width: 60%;
     height: fit-content;
-    gap: 50px;
+    gap: 90px;
+    margin-top: 30px;
     
 }
 

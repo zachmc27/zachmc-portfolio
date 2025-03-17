@@ -1,0 +1,21 @@
+.modal-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 166, 23, 0);
+    border-radius: 50%;
+    padding: 0;
+}
+
+.i {
+    width: 15px;
+    height: 15px;
+}
+
+@media (max-width: 768px) {
+    .i {
+        width: 12px;
+        height: 12px;
+    }
+}
+

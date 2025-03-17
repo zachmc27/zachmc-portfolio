@@ -6,39 +6,39 @@ export default function SkillRow() {
   return (
     <div className="skills">
         <div className="logo-box">
-          <FaHtml5 className="logo" />
+          <FaHtml5 className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">HTML</p>
         </div>
         <div className="logo-box">
-          <FaCss3Alt className="logo" />
+          <FaCss3Alt className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">CSS</p>
         </div>
         <div className="logo-box">
-          <FaJs className="logo" />
+          <FaJs className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">JavaScript</p>
         </div>
         <div className="logo-box">
-          <FaGithub className="logo" />
+          <FaGithub className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">Github</p>
         </div>
         <div className="logo-box">
-          <FaGitAlt className="logo" />
+          <FaGitAlt className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">Git</p>
         </div>
         <div className="logo-box">
-          <FaNode className="logo" />
+          <FaNode className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">Nodejs</p>
         </div>
         <div className="logo-box">
-          <FaReact className="logo" />
+          <FaReact className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">React</p>
         </div>
-        <div className="logo-box">
-          <SiTypescript className="logo" />
+        <div className="logo-box hov">
+          <SiTypescript className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">TypeScript</p>
         </div>
         <div className="logo-box">
-          <SiPostgresql className="logo" />
+          <SiPostgresql className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">PostgreSQL</p>
         </div>
         

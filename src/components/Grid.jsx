@@ -19,14 +19,9 @@ export default function Grid() {
           image ={project.image}
           repo={project.repo}  
           deployed={project.deployed} 
+          desc={project.desc}
           key={project.id}></Card>
         })}
-        
-        {/* <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card> */}
     </Flex>
   )
 }

@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     max-width: 60%;
     margin: 0 auto;
+    
 }
 .logo-box {
 
@@ -19,4 +20,15 @@
 .logo-title {
    margin-top: 8px;
    opacity: 60%; 
+}
+
+.hov:hover {
+   scale: 1.1;
+   transition: scale .2s ease-in;
+}
+
+.hov:hover + .logo-title {
+    opacity: 100%;
+    scale: 1.1;
+    transition: scale .2s ease-in;
 }

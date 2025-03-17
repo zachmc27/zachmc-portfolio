@@ -1,6 +1,7 @@
 import SkillRow from "@/components/SkillRows";
 import ResBox from "@/components/ResBox";
 import "../styles/Resume.css"
+import { motion } from "framer-motion";
 
 
 export default function() {
@@ -8,7 +9,26 @@ export default function() {
     return (
         <>
         <div className="background-img"></div>
-        <div className="section">
+        <motion.div
+        className="section"
+        initial={{
+            opacity: "0%",
+            filter: "blur(3px)",
+            y: 50
+        }}
+        animate={{
+            opacity: '100%',
+            filter: 'blur(0px)',
+            y: 0
+        }}
+        transition={{
+            duration: 1,
+            y: { type: 'spring', bounce: 0.5},
+            filter: { ease: 'easeOut'}
+     
+     
+        }}
+        >
             <ResBox />
             <h1 className="section-title">Proficiencies</h1>
             <SkillRow ></SkillRow>
@@ -19,7 +39,7 @@ export default function() {
                     <li>Expressjs</li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
         </>
     )
 }

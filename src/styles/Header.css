@@ -1,14 +1,15 @@
 
 
-.bg:before {
-    content: '';
+.zmc {
+    justify-content: flex-start;
+    color: #d6d6d6;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(10px);
-    z-index: -1;
+    left: 8%;
+    font-weight: bolder;
+    font-size: 30px;
+    border: 1px solid #d6d6d6;
+    padding: 0px 10px;
+    border-radius: 10%;
 }
+
 

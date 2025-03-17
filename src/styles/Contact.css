@@ -1,0 +1,43 @@
+.character {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 290px;
+    bottom: 140px;
+    background-image: url("../assets/images/zbig (1).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 20px var(--blue))
+}
+
+form {
+    width: 60%;
+}
+
+@media (max-width: 450px) {
+    .section {
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .info-text-box {
+        font-size: 14px;
+    }
+
+    .chakra-input, .chakra-textarea {
+        width: 100% !important;
+    }
+
+    .chakra-textarea {
+        height: 200px !important;
+    }
+
+    .chakra-button {
+        width: 100% !important;
+       
+    }
+}
