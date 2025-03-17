@@ -83,12 +83,14 @@
     position: absolute;
     bottom: 5%;
     right: 12%;
+    background-image: url('/assets/images/code-solid.svg');
 }
 
 .deployed {
     position: absolute;
     bottom: 5%;
     right: 28%;
+    background-image: url('/assets/images/globe.svg');
 }
 
 .info-pos {

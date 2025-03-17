@@ -9,7 +9,7 @@ export default function Dropdown() {
      <Menu.Root>
           <Menu.Trigger asChild>
             <Button variant="outline" size="sm" className="menu-btn">
-              <img src="/assets/images/bars-solid.svg" alt="menu-bars" className="menu-bars"/>
+              <img src="../../assets/images/bars-solid.svg" alt="menu-bars" className="menu-bars"/>
             </Button>
           </Menu.Trigger>
           <Portal>

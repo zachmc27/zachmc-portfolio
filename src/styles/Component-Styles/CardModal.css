@@ -10,6 +10,9 @@
 .i {
     width: 15px;
     height: 15px;
+    background-image: url('/assets/images/info-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media (max-width: 768px) {

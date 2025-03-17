@@ -7,7 +7,7 @@ export default function CardModal({ title, description }) {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <Button className="modal-btn">
-            <img src="assets/images/info-solid.svg" alt="info-icon" className="i"/>
+            <div className="i"></div>
         </Button>
       </Dialog.Trigger>
       <Portal>

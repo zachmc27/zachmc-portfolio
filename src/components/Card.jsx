@@ -9,13 +9,12 @@ import CardModal from "./CardModal"
 export default function Card({ title, repo, deployed, image, desc }) {
   return (
     <>
-    <Box className="card" bgImg={`url(${image})`} >
+    <Box className="card" style={{backgroundImage:`url(${image})`}} >
       <h1 className="card-title">{title}</h1>
       <Tooltip showArrow content="Repository">
         <Link 
         className="repo" 
         href={repo} 
-        bgImg="url(/assets/images/code-solid.svg)"
         target="_blank"
         rel="noopener noreferrer" />
       </Tooltip>
@@ -23,7 +22,6 @@ export default function Card({ title, repo, deployed, image, desc }) {
        <Link 
        className="deployed" 
        href={deployed} 
-       bgImg="url(/assets/images/globe.svg)"
        target="_blank"
        rel="noopener noreferrer" />
       </Tooltip> 

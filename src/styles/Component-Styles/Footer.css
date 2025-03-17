@@ -32,6 +32,16 @@
     transition: opacity .3s ease-in
 }
 
-.github {
-   filter: hue-rotate(90deg);
+.git {
+    background-image: url('../../../assets/images/github-brands.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.linked {
+    background-image: url('../../../assets/images/linkedin-brands.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

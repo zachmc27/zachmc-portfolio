@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/Component-Styles/Footer.css"
 import { Link, Flex} from '@chakra-ui/react'
 
+
 export default function Footer() {
   return (
     <div className='footer-box'>
@@ -11,14 +12,12 @@ export default function Footer() {
         </div>
         <Flex className='footer-links' gap="3" mt="10px">
             <Link 
-            className='footer-bubble' 
-            bgImg="url(/assets/images/github-brands.svg)" 
+            className='footer-bubble git' 
             href="https://github.com/zachmc27"
             target="_blank" 
             rel="noopener noreferrer"/>
             <Link 
-            className='footer-bubble' 
-            bgImg="url(/assets/images/linkedin-brands.svg)" 
+            className='footer-bubble linked' 
             href="https://www.linkedin.com/in/zach-mcgregor-57a766355/"
             target="_blank"
             rel="noopener noreferrer"

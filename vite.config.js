@@ -11,5 +11,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'), // Set alias '@' to 'src' folder
     },
   },
+  build: {
+    assetsDir: 'assets',
+    chunkSizeWarningLimit: 16000
+  }
   
 })

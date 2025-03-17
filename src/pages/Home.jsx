@@ -1,6 +1,7 @@
 import { Image, Link } from "@chakra-ui/react";
 import "../styles/Home.css";
 import { easeIn, motion } from "framer-motion";
+import headshot from "../../assets/images/headshot.jpg"
 
 
 export default function Home() {
@@ -221,7 +222,7 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                <Image src="/assets/images/headshot.jpg" className="headshot"/>
+                <Image src={`${headshot}`} className="headshot"/>
             </motion.div>
             <motion.p 
             className="about-text"
