@@ -15,7 +15,7 @@ export default function Card({ title, repo, deployed, image, desc }) {
         <Link 
         className="repo" 
         href={repo} 
-        bgImg="url(/src/assets/images/code-solid.svg)"
+        bgImg="url(/assets/images/code-solid.svg)"
         target="_blank"
         rel="noopener noreferrer" />
       </Tooltip>
@@ -23,7 +23,7 @@ export default function Card({ title, repo, deployed, image, desc }) {
        <Link 
        className="deployed" 
        href={deployed} 
-       bgImg="url(/src/assets/images/globe.svg)"
+       bgImg="url(/assets/images/globe.svg)"
        target="_blank"
        rel="noopener noreferrer" />
       </Tooltip> 

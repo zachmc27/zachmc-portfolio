@@ -12,13 +12,13 @@ export default function Footer() {
         <Flex className='footer-links' gap="3" mt="10px">
             <Link 
             className='footer-bubble' 
-            bgImg="url(/src/assets/images/github-brands.svg)" 
+            bgImg="url(/assets/images/github-brands.svg)" 
             href="https://github.com/zachmc27"
             target="_blank" 
             rel="noopener noreferrer"/>
             <Link 
             className='footer-bubble' 
-            bgImg="url(/src/assets/images/linkedin-brands.svg)" 
+            bgImg="url(/assets/images/linkedin-brands.svg)" 
             href="https://www.linkedin.com/in/zach-mcgregor-57a766355/"
             target="_blank"
             rel="noopener noreferrer"

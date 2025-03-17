@@ -221,7 +221,7 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                <Image src="/src/assets/images/headshot.jpg" className="headshot"/>
+                <Image src="/assets/images/headshot.jpg" className="headshot"/>
             </motion.div>
             <motion.p 
             className="about-text"

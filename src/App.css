@@ -57,7 +57,7 @@ main {
 
 .background-img {
     height: 250px;
-    background-image: url('./assets/images/layered-waves-haikei (2).svg');
+    background-image: url('../assets/images/layered-waves-haikei (2).svg');
     background-repeat: no-repeat;
     filter: blur(100px)
 }
