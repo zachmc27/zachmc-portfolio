@@ -10,7 +10,10 @@ export default function ResumeBox() {
                 <p className="faded">For my full resume, click this file icon!</p>
                 <Tooltip showArrow content="Zach_McGregor_Resume.pdf">
                     <div className="file-box">
-                      <a href={`${Resume}`} className="link">
+                      <a href={`${Resume}`}  
+                      className="link" 
+                      target="_blank"
+                      rel="noopener noreferrer">
                         <FaRegFile className="file-icon" fill="var(--theme-color)"/>
                       </a>  
                     </div>
