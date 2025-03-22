@@ -35,7 +35,11 @@
    
   To use the application, do the following:
 
-  When the website is first opened the first thing that will be displayed is a welcome screen with my name and social links, and as you scroll down you will see an about me section. At the top of the page there will be a navigation bar where you can navigate through each page on the website. On the portfolio page, there will be cards each representing a projectm and in these cards, there will be bubbles containing links to the repositories, links to the deployed applications, and and info button that will open a modal containing more information about the project. On the resume page, there will be a file icon at the top that, when pressed, will queue a download to my official resume. The contact page has a form setup but does not actually send messages yet, as the backend has not yet been built.
+  When the website is first opened the first thing that will be displayed is a welcome screen with my name and social links, as shown below:
+  
+  ![home-screen](./assets/images/home.png)
+  
+  As you scroll down you will see an about me section. At the top of the page there will be a navigation bar where you can navigate through each page on the website. On the portfolio page, there will be cards each representing a projectm and in these cards, there will be bubbles containing links to the repositories, links to the deployed applications, and and info button that will open a modal containing more information about the project. On the resume page, there will be a file icon at the top that, when pressed, will queue a download to my official resume. The contact page has a form setup but does not actually send messages yet, as the backend has not yet been built.
     
   ## Contributing
    
