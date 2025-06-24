@@ -12,6 +12,7 @@ export default function() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('')
+    const [handleSuccess, setHandleSuccess] = useState(false)
 
     const [nameInvalid, setNameInvalid] = useState(false);
     const [emailInvalid, setEmailInvalid] = useState(false);
@@ -33,7 +34,7 @@ export default function() {
     }
 
  
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         const trimmedName = name.trim();
@@ -41,13 +42,16 @@ export default function() {
         const trimmedMessage = message.trim();
         
         if (trimmedName === "") {
+            setHandleSuccess(false)
             setNameInvalid(true)
             return
         } else if (trimmedEmail === "" || !validateEmail(trimmedEmail)) {
+            setHandleSuccess(false)
             setEmailInvalid(true)
             return
         } else if (trimmedMessage === "") {
             setMessageInvalid(true)
+            setHandleSuccess(false)
             return
         } else {
            setNameInvalid(false) 
@@ -57,6 +61,26 @@ export default function() {
             console.log('Name:', name)
             console.log('Email:', email)
             console.log('Message:', message)
+            const formData = new FormData(e.target);
+
+            formData.append("access_key", "3f98e1d6-70f0-4126-bbfb-26da16e7cacc");
+
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+            }).then((res) => res.json());
+
+            if (res.success) {
+            console.log("Success", res);
+            setHandleSuccess(true)
+            }
         }
     }
     return (
@@ -91,7 +115,9 @@ export default function() {
                     <Input 
                         placeholder="Enter a name..." 
                         onChange={handleNameState}
-                        width="500px"/>
+                        width="500px"
+                        type="text"
+                        name="name"/>
                     <Field.ErrorText>Name is required</Field.ErrorText>
                 </Field.Root>
                     <Field.Root invalid={emailInvalid}>
@@ -99,7 +125,9 @@ export default function() {
                     <Input 
                         placeholder="name@email.com" 
                         onChange={handleEmailState}
-                        width="500px"/>
+                        width="500px"
+                        type="email"
+                        name="email"/>
                     <Field.ErrorText>Please enter a valid email.</Field.ErrorText>
 
                 </Field.Root>
@@ -110,13 +138,19 @@ export default function() {
                         height="400px" 
                         placeholder="Write something..." 
                         resize="none" 
-                        onChange={handleMessageState}/>
+                        onChange={handleMessageState}
+                        name="message"/>
                     <Field.ErrorText>A message is required.</Field.ErrorText>
                 </Field.Root>
 
                 <Button type="submit" width="100px" mt="10px" bgColor="var(--theme-color)">Submit</Button>
+                {
+                handleSuccess && 
+                <p>Message sent!</p>
+                }
                 </Stack>
             </form>
+            
     
         </motion.div>
        
