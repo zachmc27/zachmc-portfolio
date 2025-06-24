@@ -18,13 +18,15 @@ export default function Card({ title, repo, deployed, image, desc }) {
         target="_blank"
         rel="noopener noreferrer" />
       </Tooltip>
-      <Tooltip showArrow content="Website">
-       <Link 
-       className="deployed" 
-       href={deployed} 
-       target="_blank"
-       rel="noopener noreferrer" />
-      </Tooltip> 
+      {deployed !== "" &&
+        <Tooltip showArrow content="Website">
+        <Link 
+        className="deployed" 
+        href={deployed} 
+        target="_blank"
+        rel="noopener noreferrer" />
+        </Tooltip> 
+      }
       <Tooltip showArrow content="More info">
         <Box className="info-pos"> 
           <CardModal title={title} description={desc}/>

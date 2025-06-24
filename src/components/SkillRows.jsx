@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaGithub, FaGitAlt, FaNode, FaReact} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaGithub, FaGitAlt, FaNode, FaReact, FaPython} from "react-icons/fa";
 import "../styles/Component-Styles/SkillRows.css"
-import { SiPostgresql, SiTypescript } from "react-icons/si";
+import { SiPostgresql, SiTypescript, SiCypress, SiMongodb, SiGraphql } from "react-icons/si";
 
 export default function SkillRow() {
   return (
@@ -41,7 +41,22 @@ export default function SkillRow() {
           <SiPostgresql className="logo hov" fill="var(--skills)"/>
           <p className="logo-title">PostgreSQL</p>
         </div>
-        
+        <div className="logo-box">
+          <SiMongodb className="logo hov" fill="var(--skills)"/>
+          <p className="logo-title">MongoDB</p>
+        </div>
+        <div className="logo-box">
+          <SiGraphql className="logo hov" fill="var(--skills)"/>
+          <p className="logo-title">GraphQL</p>
+        </div>
+        <div className="logo-box">
+          <FaPython className="logo hov" fill="var(--skills)"/>
+          <p className="logo-title">Python</p>
+        </div>
+        <div className="logo-box">
+          <SiCypress className="logo hov" fill="var(--skills)"/>
+          <p className="logo-title">Cypress</p>
+        </div>
     </div>
   )
 }

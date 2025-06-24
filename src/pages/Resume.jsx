@@ -37,6 +37,9 @@ export default function() {
                 <ul>
                     <li>REST APIs</li>
                     <li>Expressjs</li>
+                    <li>Postman</li>
+                    <li>Insomnia</li>
+                    <li>Framer Motion</li>
                 </ul>
             </div>
         </motion.div>
