@@ -1,4 +1,5 @@
 import { Image, Link } from "@chakra-ui/react";
+import { Link as SiteLink } from "react-router-dom";
 import "../styles/Home.css";
 import { easeIn, motion } from "framer-motion";
 import headshot from "../../assets/images/headshot.jpg"
@@ -242,9 +243,9 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                It looks like you've found your way into my little corner of the internet! Born in 2000, I am a Southern Californian currently based in Austin, TX
-                (sorry, Texans). My coding journey began at the very end of my last. When my dreams had slipped out of my reach and I found myself lost in life, a stranger
-                that I stumbled across in a local bar decided to reach out a generous hand and show me a new path.  
+                Welcome to my portfolio! Born in 2000, I am a Southern Californian currently based in Austin, TX
+                (sorry, Texans). In June 2025, I completed the <span className="b">UTSA Software Development Bootcamp</span>. This course gave me a very comprehensive foundation in
+                software development. Teaching me not only tools like TypeScript, React, Nodejs and SQL/NoSQL, but also development practices like DevOps, Agile, and Object Oriented Programming.
             </motion.p>
             <br />
             <motion.p 
@@ -265,9 +266,9 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                My first go of learning to code was in early 2023 through an asynchronous udemy course... however that didn't last long when I realized that trying to 
-                give directions to a computer, at times, felt like trying to teach a toddler algebra. Early on, I gave up. After living and growing as a person, I gave it another shot
-                in late 2024. With the previous frustrations weighing on me, I tried to approach coding with a different mindset. The high I felt when I was able to overcome the obstacles that faced me, was what caused me to fall in love with coding.
+                Coming from a background of competitive gaming, I found a deep enjoyment for leading teams. Now, as an emerging software engineer, I have honed these leadership and interpersonal skills
+                through collaboration on a couple full stack projects (more info on these projects <SiteLink to="/Portfolio" ><span className="link-text">here</span></SiteLink>). Aside from my involvment in the process of coding, I contribute to teams through project ideation, wireframing, organizing file archetecture, roadmapping agile
+                sprints, conducting code review, and assisting teammates whenever they need a hand.
             </motion.p>
             <br />
             <motion.p 
@@ -287,8 +288,8 @@ export default function Home() {
                 y: { type: 'spring', bounce: 0.5},
                 filter: { ease: 'easeOut'}
             }}
-            >I'm currently enrolled in the <span className="b">UTSA Software Development Bootcamp</span> and am eager to carve out my future in the tech industry. When I'm not coding, I enjoy spending time with my girlfriend, friends, and family. My hobbies include volleyball, video games,
-                and exploring new places. If you've made it all the way through, thanks for reading!
+            >I am currently transitioning from hospitality to get a full time position as a software developer. Aside from job searching, I continue to hone my existing skills, expand my skillset by learning new tools, and
+            deepen my understanding of computer science fundementally. Aside from that, I enjoy competitive Valorant, recreational volleyball, working out, and spending time with friends and loved ones.
             </motion.p>
 
             </div>

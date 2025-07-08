@@ -89,4 +89,6 @@ main {
     box-shadow: 1px 1px 10px 1px var(--theme-color);
 }
 
-
+.link-text {
+    color: var(--theme-color)
+}
