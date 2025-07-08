@@ -267,7 +267,7 @@ export default function Home() {
             }}
             >
                 Coming from a background of competitive gaming, I found a deep enjoyment for leading teams. Now, as an emerging software engineer, I have honed these leadership and interpersonal skills
-                through collaboration on a couple full stack projects (more info on these projects <SiteLink to="/Portfolio" ><span className="link-text">here</span></SiteLink>). Aside from my involvment in the process of coding, I contribute to teams through project ideation, wireframing, organizing file archetecture, roadmapping agile
+                through collaboration on a couple full stack projects (more info on these projects <SiteLink to="/Portfolio" ><span className="link-text">here</span></SiteLink>). Aside from my involvment in the process of coding, I contribute to teams through project ideation, wireframing, organizing file architecture, roadmapping agile
                 sprints, conducting code review, and assisting teammates whenever they need a hand.
             </motion.p>
             <br />
