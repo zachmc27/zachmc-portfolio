@@ -245,7 +245,7 @@ export default function Home() {
             >
                 Welcome to my portfolio! Born in 2000, I am a Southern Californian currently based in Austin, TX
                 (sorry, Texans). In June 2025, I completed the <span className="b">UTSA Software Development Bootcamp</span>. This course gave me a very comprehensive foundation in
-                software development. Teaching me not only tools like TypeScript, React, Nodejs and SQL/NoSQL, but also development practices like DevOps, Agile, and Object Oriented Programming.
+                software development. Teaching me technologies including TypeScript, React, Nodejs, Python and SQL/NoSQL, and development practices like DevOps, Agile, and Object Oriented Programming.
             </motion.p>
             <br />
             <motion.p 
@@ -266,9 +266,9 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                Coming from a background of competitive gaming, I found a deep enjoyment for leading teams. Now, as an emerging software engineer, I have honed these leadership and interpersonal skills
-                through collaboration on a couple full stack projects (more info on these projects <SiteLink to="/Portfolio" ><span className="link-text">here</span></SiteLink>). Aside from my involvment in the process of coding, I contribute to teams through project ideation, wireframing, organizing file architecture, roadmapping agile
-                sprints, conducting code review, and assisting teammates whenever they need a hand.
+                As an emerging software engineer, the strengths I bring to the practice include leadership and interpersonal skills that I gained through my work in guest experience roles and my hobby of competitive gaming. As a result, I have found success in
+                collaborating on Agile teams developing full stack, production ready applications (more info on these projects <SiteLink to="/Portfolio" ><span className="link-text">here</span></SiteLink>). Aside from my involvment in writing code, I contribute to teams through project ideation, wireframing, organizing file architecture, roadmapping agile
+                sprints, conducting code reviews, and supporting peers through complex problem solving. 
             </motion.p>
             <br />
             <motion.p 
@@ -289,7 +289,7 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >I am currently transitioning from hospitality to get a full time position as a software developer. Aside from job searching, I continue to hone my existing skills, expand my skillset by learning new tools, and
-            deepen my understanding of computer science fundementally. Aside from that, I enjoy competitive Valorant, recreational volleyball, working out, and spending time with friends and loved ones.
+            deepening my understanding of computer science fundementally. Aside from that, I enjoy competitive Valorant, recreational volleyball, working out, and spending time with friends and loved ones.
             </motion.p>
 
             </div>
