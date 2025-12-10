@@ -15,16 +15,17 @@ export default function Home() {
             <div className="position">
                 <motion.h2 
                 className="sub-txt"
-                initial= {{
+                initial={{
                     opacity: "0%",
                     filter: 'blur(10px)',
                     x: 20
                 }}
-                animate= {{
+                whileInView={{
                     opacity: '100%',
                     filter: 'blur(0px)',
                     x: 0
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: .5,
                     ease: 'easeOut',
@@ -34,16 +35,17 @@ export default function Home() {
 
                 <motion.h1 
                 className="main-txt"
-                initial= {{
+                initial={{
                     opacity: "0%",
                     filter: 'blur(10px)',
                     y: 20
                 }}
-                animate= {{
+                whileInView={{
                     opacity: '100%',
                     filter: 'blur(0px)',
                     y: 0
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: .5,
                     ease: 'easeOut'
@@ -52,16 +54,17 @@ export default function Home() {
 
                 <motion.h1 
                 className="main-txt"
-                initial= {{
+                initial={{
                     opacity: "0%",
                     filter: 'blur(10px)',
                     y: 20
                 }}
-                animate= {{
+                whileInView={{
                     opacity: '100%',
                     filter: 'blur(0px)',
                     y: 0
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: .5,
                     ease: 'easeOut'
@@ -70,16 +73,17 @@ export default function Home() {
 
             <motion.h2 
             className="badge"
-            initial= {{
+            initial={{
                 opacity: "0%",
                 filter: 'blur(10px)',
                 x: -20
             }}
-            animate= {{
+            whileInView={{
                 opacity: '100%',
                 filter: 'blur(0px)',
                 x: 0
             }}
+            viewport={{ once: true }}
             transition={{
                 duration: .5,
                 ease: 'easeOut',
@@ -95,21 +99,18 @@ export default function Home() {
                     rotate:"0deg",
                     scale: 0,
                     filter: "blur(5px)"
-                    
                 }}
-                animate={{
+                whileInView={{
                     rotate: ['0deg','5deg','-15deg', '370deg', '360deg'],
                     scale: [0, .5, .3, 1.2, 1],
                     filter: ["blur(.5px)", 'blur(0px)', 'blur(1px)', 'blur(.2px)', 'blur(0px)' ]
-
-                    
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: 2,
                     ease: "circInOut",
                     times: [0, .2, .4, .8, 1],
                     delay: 2
-                
                 }}
             >
             <Link 
@@ -125,21 +126,18 @@ export default function Home() {
                     rotate:"0deg",
                     scale: 0,
                     filter: "blur(5px)"
-                    
                 }}
-                animate={{
+                whileInView={{
                     rotate: ['0deg','5deg','-15deg', '370deg', '360deg'],
                     scale: [0, .5, .3, 1.2, 1],
                     filter: ["blur(.5px)", 'blur(0px)', 'blur(1px)', 'blur(.2px)', 'blur(0px)' ]
-
-                    
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: 2,
                     ease: "circInOut",
                     times: [0, .2, .4, .8, 1],
                     delay: 2
-                
                 }}
             >
                 <Link
@@ -150,27 +148,23 @@ export default function Home() {
                 />
             </motion.div>
             <motion.div 
-            
                 className="social-bubble bub3"
                 initial={{
                     rotate:"0deg",
                     scale: 0,
                     filter: "blur(5px)"
-                    
                 }}
-                animate={{
+                whileInView={{
                     rotate: ['0deg','5deg','-15deg', '370deg', '360deg'],
                     scale: [0, .5, .3, 1.2, 1],
                     filter: ["blur(.5px)", 'blur(0px)', 'blur(1px)', 'blur(.2px)', 'blur(0px)' ]
-
-                    
                 }}
+                viewport={{ once: true }}
                 transition={{
                     duration: 2,
                     ease: "circInOut",
                     times: [0, .2, .4, .8, 1],
                     delay: 2
-                   
                 }}
             >
                 <Link 

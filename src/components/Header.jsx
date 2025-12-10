@@ -1,11 +1,9 @@
-import {  Flex, Heading, Spacer, Box, useMediaQuery } from "@chakra-ui/react"
+import {  Flex, Spacer, Box } from "@chakra-ui/react"
 import Navbar from "./Navbar.jsx"
 import "../styles/Header.css"
-import "../styles/navbar-fix.css"
 import Dropdown from "./Menu.jsx"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 
 
 export default function Header() {

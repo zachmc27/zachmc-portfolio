@@ -167,7 +167,10 @@
     width: 500px;
     height: 500px;
     position: absolute;
-    top: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 .about-text {
@@ -186,8 +189,11 @@
     .headshot {
         width: 400px;
         height: 400px;
-        margin: 0 auto;
-        top: 0px
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
     }
 
     .about-content {

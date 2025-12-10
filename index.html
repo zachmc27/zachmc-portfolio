@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/images/z22.png" />
     
+    <!-- Prevent FOUC and ensure dark theme loads first -->
+    <script>
+      document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    </script>
+    
     <!-- Resource Hints for Better Performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload Critical Fonts -->
-    <link rel="preload" href="./fonts/quicksand-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Optimized Google Fonts Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Self-hosted Optimized Fonts -->
-    <link rel="stylesheet" href="./fonts/fonts-optimized.css">
+    <!-- Fallback to local fonts if available -->
+    <link rel="stylesheet" href="./fonts/fonts-woff2.css" media="print" onload="this.media='all'">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zach McGregor | Personal Portfolio</title>
