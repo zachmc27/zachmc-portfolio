@@ -19,11 +19,17 @@ const OptimizedImage = ({
   // Handle both imported paths and string paths
   const imagePath = typeof src === 'string' ? src : src;
   
-  // Extract filename without extension
+  // Extract filename without extension and Vite hash
+  // Handles both original paths like "headshot.jpg" and
+  // Vite-processed paths like "headshot-Dmq_Hrch.jpg"
   const getBaseName = (path) => {
     const parts = path.split('/');
     const filename = parts[parts.length - 1];
-    return filename.replace(/\.[^/.]+$/, '');
+    // Remove extension first
+    const nameWithoutExt = filename.replace(/\.[^/.]+$/, '');
+    // Remove Vite hash (pattern: -[alphanumeric chars] at end of filename)
+    // This matches the hash Vite adds during build (e.g., headshot-Dmq_Hrch -> headshot)
+    return nameWithoutExt.replace(/-[A-Za-z0-9_-]{8,}$/, '');
   };
 
   const baseName = getBaseName(imagePath);
