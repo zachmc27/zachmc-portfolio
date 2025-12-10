@@ -1,0 +1,9 @@
+
+
+
+
+/* Additional safety for Chakra UI components */
+html.dark .chakra-box,
+html[data-theme="dark"] .chakra-box {
+  background-color: transparent;
+}

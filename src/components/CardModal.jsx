@@ -2,14 +2,9 @@ import { Button, CloseButton, Dialog, Portal, Image } from "@chakra-ui/react"
 import React from 'react'
 import "../styles/Component-Styles/CardModal.css"
 
-export default function CardModal({ title, description }) {
+export default function CardModal({ title, description, onClose }) {
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <Button className="modal-btn">
-            <div className="i"></div>
-        </Button>
-      </Dialog.Trigger>
+    <Dialog.Root open={true} onOpenChange={(open) => !open && onClose()}>
       <Portal>
         <Dialog.Backdrop />
         <Dialog.Positioner>
@@ -24,7 +19,13 @@ export default function CardModal({ title, description }) {
             </Dialog.Body>
             <Dialog.Footer>
               <Dialog.ActionTrigger asChild>
-                <Button bgColor="var(--theme-color)" fontSize="12px">Close</Button>
+                <Button 
+                  bgColor="var(--theme-color)" 
+                  fontSize="12px"
+                  onClick={onClose}
+                >
+                  Close
+                </Button>
               </Dialog.ActionTrigger>
             </Dialog.Footer>
            

@@ -6,9 +6,12 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "prebuild": "mkdir -p public/assets/images/optimized && cp -r assets/images/optimized/* public/assets/images/optimized/ 2>/dev/null || true",
     "build": "vite build",
+    "build:optimized": "vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "font:check": "ls -la public/fonts/"
   },
   "dependencies": {
     "@apollo/client": "^3.13.4",

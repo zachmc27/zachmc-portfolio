@@ -1,0 +1,34 @@
+/* Font Loading States - Prevents FOUT (Flash of Unstyled Text) */
+
+/* Before fonts are loaded - use system fonts with similar metrics */
+html:not(.fonts-loaded) {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Smooth transition when fonts load */
+html.fonts-loaded {
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Enhanced font loading performance */
+.fonts-loading {
+  visibility: hidden;
+}
+
+.fonts-loaded .fonts-loading {
+  visibility: visible;
+}
+
+/* Optimize font rendering */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent font loading flash */
+@media (prefers-reduced-motion: no-preference) {
+  html.fonts-loaded * {
+    transition: font-family 0.1s ease;
+  }
+}

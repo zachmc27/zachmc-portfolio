@@ -13,7 +13,44 @@ export default defineConfig({
   },
   build: {
     assetsDir: 'assets',
-    chunkSizeWarningLimit: 16000
+    chunkSizeWarningLimit: 16000,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Core vendor libraries
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'vendor';
+            }
+            if (id.includes('@chakra-ui') || id.includes('@emotion') || id.includes('framer-motion')) {
+              return 'chakra';
+            }
+            return 'vendor';
+          }
+          
+          // Route-based code splitting
+          if (id.includes('/pages/Portfolio')) {
+            return 'portfolio-page';
+          }
+          if (id.includes('/pages/Resume')) {
+            return 'resume-page';
+          }
+          if (id.includes('/pages/Contact')) {
+            return 'contact-page';
+          }
+          
+          // Component-level lazy loading
+          if (id.includes('/components/CardModal')) {
+            return 'card-modal-chunk';
+          }
+          
+          // Other component chunks
+          if (id.includes('/components/')) {
+            return 'components';
+          }
+        }
+      }
+    }
   }
   
 })

@@ -1,0 +1,113 @@
+/* Route Lazy Loading Styles */
+
+/* Page loader animation */
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  width: 100%;
+}
+
+/* Loading spinner styles */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 100, 33, 0.2);
+  border-top: 4px solid var(--theme-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading text animation */
+.loading-text {
+  color: var(--skills);
+  font-size: 18px;
+  font-weight: 500;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Route transition animations */
+.route-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.route-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.route-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.route-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+/* Preloading hint styles */
+.nav-item-preloading {
+  position: relative;
+}
+
+.nav-item-preloading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--theme-color);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-item-preloading:hover::after {
+  width: 80%;
+}
+
+/* Performance optimization classes */
+.lazy-route {
+  contain: layout style paint;
+}
+
+.lazy-route-loading {
+  will-change: opacity, transform;
+}
+
+.lazy-route-loaded {
+  will-change: auto;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner {
+    animation: none;
+  }
+  
+  .loading-text {
+    animation: none;
+  }
+  
+  .route-enter-active,
+  .route-exit-active {
+    transition: none;
+  }
+}

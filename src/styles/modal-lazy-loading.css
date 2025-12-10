@@ -1,0 +1,61 @@
+/* Modal Lazy Loading Styles */
+
+.modal-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-loading .loading-text {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--skills);
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure the info button maintains original styling */
+.info-pos .modal-btn {
+  /* Reset Chakra UI Button styles to preserve original icon appearance */
+  background: rgba(255, 166, 23, 0) !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  min-width: auto !important;
+  border-radius: 50%;
+}
+
+.info-pos .modal-btn:hover {
+  background: rgba(255, 166, 23, 0) !important;
+  transform: none !important;
+}
+
+/* Ensure info icon is always visible */
+.info-pos .modal-btn .i {
+  width: 15px;
+  height: 15px;
+  background-image: url('/assets/images/info-solid.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .info-pos .modal-btn .i {
+    width: 12px;
+    height: 12px;
+  }
+}

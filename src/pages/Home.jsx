@@ -3,6 +3,7 @@ import { Link as SiteLink } from "react-router-dom";
 import "../styles/Home.css";
 import { easeIn, motion } from "framer-motion";
 import headshot from "../../assets/images/headshot.jpg"
+import OptimizedImage from "../components/OptimizedImage"
 
 
 export default function Home() {
@@ -223,7 +224,7 @@ export default function Home() {
                 filter: { ease: 'easeOut'}
             }}
             >
-                <Image src={`${headshot}`} className="headshot"/>
+                <OptimizedImage src={headshot} alt="Zach McGregor headshot" className="headshot" loading="lazy"/>
             </motion.div>
             <motion.p 
             className="about-text"

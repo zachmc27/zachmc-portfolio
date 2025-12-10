@@ -1,0 +1,1 @@
+.others-box{border:1px solid var(--accent);border-radius:20px;padding:20px;margin-top:70px;margin-bottom:100px;box-shadow:1px 1px 12px 1px var(--theme-color)}.others-box ul{list-style-type:circle;padding-left:20px;margin-top:10px}.others-box li{margin-bottom:5px}@media (max-width: 450px){.others-box{width:80%}}
