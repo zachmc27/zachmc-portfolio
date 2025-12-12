@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/images/z22.png" />
     
+    <!-- Critical CSS inlined to prevent render blocking -->
+    <style>
+      :root {
+        background-color: #161616;
+        --theme-color: #ff6421;
+        --accent: #494949;
+        --skills: #e7e7e7;
+        --blue: #1E3E62;
+        --light-blue: #7dccf4;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      }
+      body, html { height: 100%; margin: 0; background-color: #161616; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      p, h1 { color: #d6d6d6; }
+      #root { display: flex; flex-direction: column; min-height: fit-content; }
+      main { flex: 1; display: flex; flex-direction: column; }
+    </style>
+    
     <!-- Prevent FOUC and ensure dark theme loads first -->
     <script>
       document.documentElement.classList.add('dark');
@@ -14,11 +32,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Optimized Google Fonts Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Non-blocking Font Loading with Preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
     
     <!-- Fallback to local fonts if available -->
     <link rel="stylesheet" href="./fonts/fonts-woff2.css" media="print" onload="this.media='all'">
+    
+    <!-- Font loading optimization -->
+    <script>
+      // Update font-family once Google Fonts are loaded
+      if ('fonts' in document) {
+        Promise.all([
+          document.fonts.load('400 16px Quicksand'),
+          document.fonts.load('400 16px Montserrat')
+        ]).then(() => {
+          document.documentElement.style.setProperty('--font-loaded', '1');
+        });
+      }
+    </script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zach McGregor | Personal Portfolio</title>

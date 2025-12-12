@@ -1,13 +1,13 @@
 /* Font Loading States - Prevents FOUT (Flash of Unstyled Text) */
 
-/* Before fonts are loaded - use system fonts with similar metrics */
-html:not(.fonts-loaded) {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+/* Default system fonts before Google Fonts load */
+:root:not([style*="--font-loaded"]) {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
 }
 
-/* Smooth transition when fonts load */
-html.fonts-loaded {
-  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+/* Google Fonts after they've loaded */
+:root[style*="--font-loaded"] {
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif !important;
 }
 
 /* Enhanced font loading performance */
