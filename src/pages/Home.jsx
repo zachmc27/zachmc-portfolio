@@ -6,10 +6,12 @@ import headshot from "../../assets/images/headshot.jpg"
 import OptimizedImage from "../components/OptimizedImage"
 
 
+
 export default function Home() {
 
     return(
         <>
+        
         {/* header */}
         <div className="welcome-screen">
             <div className="position">
@@ -289,6 +291,7 @@ export default function Home() {
 
             </div>
         </div>
+        
         </>
     )
 }

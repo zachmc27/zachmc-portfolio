@@ -15,7 +15,7 @@
     bottom: 0;
     background: inherit;
     filter: blur(100px);
-    z-index: -1;
+    z-index: 0;
     background-repeat: no-repeat;
     background-image: url('/assets/images/layered-waves-haikei (2).svg');
 }
